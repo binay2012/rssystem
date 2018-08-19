@@ -1,4 +1,4 @@
-from app import app, db
+from __init__ import db, app
 from flask_login import LoginManager, login_user, UserMixin, login_required,current_user
 
 

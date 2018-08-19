@@ -1,9 +1,9 @@
 import models
 from flask import Flask, render_template, request, redirect, url_for
-from forms import Login, Register, AddBooks
+import forms
 from sqlalchemy import and_
-from app import app, db
-from algorithm import user_recommendations
+from __init__ import app
+import algorithm
 from flask_login import LoginManager, login_user, UserMixin, login_required,current_user
 
 login_manager = LoginManager()
