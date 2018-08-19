@@ -1,5 +1,5 @@
 import time
-import models
+from models import *
 from math import sqrt
 
 
