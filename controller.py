@@ -2,7 +2,6 @@ import models
 from flask import Flask, render_template, request, redirect, url_for
 from forms import Login, Register, AddBooks
 from sqlalchemy import and_
-from models import User, book, bookratings, Admin
 from app import app, db
 from algorithm import user_recommendations
 from flask_login import LoginManager, login_user, UserMixin, login_required,current_user
