@@ -1,0 +1,54 @@
+{% extends "indexs.html" %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+
+
+
+<div class="row">
+	<div class = "col-md-12">
+		<div class = "box-header, with-border" style="margin: 5%;">
+			<!-- <div class="dataTables_wrapper" id="example_wrapper" ;">
+				<div class="dataTables_length" id="example_length">
+					<div class="dataTables_filter" id="example_filter"> -->
+
+						<table id="example" class="display" style="width:100%">
+					        <thead>
+					            <tr>
+					                <th>ISBN</th>
+					                <th>Book Title</th>
+					                <th>Book Author</th>
+					                <th>Year Published</th>
+					                <th>Publisher</th>
+					                
+					            </tr>
+					        </thead>
+					        <tbody>
+					        	{% for res in booklist %}
+					            <tr>
+					                <td>{{ res.isbn }}</td>
+					                <td>{{ res.booktitle }}</td>
+					                <td>{{ res.bookauthor }}</td>
+					                <td>{{ res.yrpublished }}</td>
+					                <td>{{ res.publisher }}</td>
+					            </tr>
+					            {% endfor %}
+					        </tbody>
+					    </table>
+					<!-- </div>
+				</div>
+			</div> -->
+		    </div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+	    $('#example').DataTable();
+	} );
+</script>
+{% endblock content %}

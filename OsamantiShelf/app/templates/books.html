@@ -1,0 +1,117 @@
+<head>
+ <title> Home </title>    
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script><link rel ='stylesheet' type="text/css" href="{{ url_for('static', filename ='home.css' )}}">
+
+
+</head>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header"
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/addbooks">Add Books</a>
+                    </li>
+                    <li>
+                        <a href="/signup">Create Account</a>
+                    </li>
+                    <li>
+                        <a href="/login">Log In</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Book Recommeder</h1>
+            <p>A great way to read books!</p>
+            <p><a href="/viewbooks" class="btn btn-primary btn-large">View our books!</a>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>All Books</h3>
+            </div>
+        </div>
+      
+
+        <!-- Page Features -->
+   
+<div class="parent-wrapper">
+
+        <div class="parent">
+       {% for res in showbooks %}
+
+
+          <div class="child">
+
+     <div class="row text-center" >
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src='{{ res.imgurl3}}' alt="text">
+                    <div class="caption">
+                        <h3>{{ res.isbn }}</h3>
+                        <p>{{ res.booktitle}} </p>
+                        <p>{{ res.bookauthor}} </p>
+                        <p>{{ res.yrpublished}} </p>
+                        <p>{{ res.publisher}} </p>
+
+                            <a href="#" class="btn btn-primary">Read Now!</a>
+                    </div>
+                </div>
+            </div>
+             
+           </div>
+       
+        </div>
+
+
+     {% endfor %}  
+
+
+
+     </div>
+     </div>
+
+
+
+
+
+
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © Your Biz 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>

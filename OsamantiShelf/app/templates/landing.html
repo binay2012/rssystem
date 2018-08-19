@@ -1,0 +1,35 @@
+
+
+
+<div class="container">
+{% extends "layout_hm.html" %}
+{% block content %}
+    <div class="tm-main-content">
+   
+
+    <section class="media tm-highlight tm-highlight-w-icon">
+
+                    <div class="tm-highlight-icon">
+                        <i class="fa tm-fa-6x fa-meetup"></i>    
+                    </div>                    
+
+                    <div class="media-body">
+                        <header>
+                            <h2>Welcome to Omsanti Bookstore!</h2>
+                        </header>
+                        <p class="tm-margin-b">A shelf for all your needs!</p>
+                        <a href="" class="tm-white-bordered-btn">Navigate today!</a>
+                    </div>                    
+                </section>
+    </div>
+
+
+
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}
